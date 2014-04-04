@@ -1,0 +1,25 @@
+{
+  "name": "node-socket-proxy",
+  "version": "0.1.0",
+  "description": "Socket proxy on node server",
+  "bin": {
+    "node-socket-proxy": "./bin/node-socket-proxy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MaximKraev/node-socket-proxy.git"
+  },
+  "author": "Maxim Kraev <maxim.kraev@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/MaximKraev/node-socket-proxy/issues"
+  },
+  "homepage": "https://github.com/MaximKraev/node-socket-proxy",
+  "dependencies": {
+    "commander": "^2.1.0",
+    "lodash": "^2.4.1",
+    "q": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.4"
+  }
+}

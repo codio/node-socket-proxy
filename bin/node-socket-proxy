@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+var proxy = require('../');
+
+program
+    .version(proxy.version)
+    .option('--host [host]', 'Host listen to, default 0.0.0.0', '0.0.0.0')
+    .option('--host-port [port]', 'Port forward from')
+    .option('--remote [host]', 'Host forward to')
+    .option('--remote-port [port]', 'port forward to')
+    .parse(process.argv);
+
+function onConnect(host, port, callback) {
+    callback(false, program.remote, program.remotePort);
+}
+
+proxy.server.start(program.hostPort, program.host, onConnect);
